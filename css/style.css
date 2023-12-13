@@ -1,6 +1,9 @@
 :root {
     --main-text-color: white;
     --secondary-text-color: #7D7F84;
+    --nav-menu-width: 230px;
+    --footer-height: 90px;
+    --upgrade-bar-height: 90px;
 }
 
 /* RESET */
@@ -15,11 +18,51 @@ img {
     width: 100%;
 }
 
-/* ********* GENERAL */
+/********** GENERAL */
 
 body {
     font-family: 'Montserrat', sans-serif;
 }
 
-/* ********** MAIN */
+/********** APP-CONTENT GRID */
 
+
+
+/*********** MAIN */
+
+#main-container {
+    height: calc(100vh - var(--footer-height));
+    background-color: #141922;
+    display: flex;
+}
+
+#nav-left-menu {
+    min-width: var(--nav-menu-width);
+    height: 100%;
+    background-color: black;
+}
+
+#upgrade-bar {
+    min-width: calc(100% - 230px);
+    height: var(--upgrade-bar-height);
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    left: var(--nav-menu-width);
+}
+
+#app-content {
+    height: calc(100vh - 90px);
+    width: 100%;
+    overflow: auto;
+    color: white;
+    padding-top: var(--upgrade-bar-height);
+}
+
+
+
+/*********** FOOTER */
+
+#footer {
+    height: var(--footer-height);
+    background-color: #282828;
+}
