@@ -1,9 +1,12 @@
 :root {
-    --main-text-color: white;
-    --secondary-text-color: #7D7F84;
+    --main-text-color: #dbdbdb;
+    --secondary-text-color: #7c7e84;
+
     --nav-menu-width: 230px;
     --footer-height: 90px;
     --upgrade-bar-height: 90px;
+    --padding-nav-left-menu: 10px;
+    --subtitle-font-size: 0.8rem;
 }
 
 /* RESET */
@@ -18,10 +21,28 @@ img {
     width: 100%;
 }
 
+a {
+    color: currentColor;
+    text-decoration: none;
+}
+
 /********** GENERAL */
 
 body {
     font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+svg {
+    width: 30px;
+    height: 25px;
+    color: currentColor;
+}
+
+/****** HOVER */
+
+button:hover {
+    cursor: pointer;
 }
 
 /********** APP-CONTENT GRID */
@@ -60,28 +81,93 @@ body {
     display: flex;
 }
 
+/* nav left menu */
+
 #nav-left-menu {
-    min-width: var(--nav-menu-width);
+    max-width: var(--nav-menu-width);
     height: 100%;
     background-color: black;
+    display: flex;
+    flex-direction: column;
+    font-size: var(--subtitle-font-size);
 }
 
+#nav-left-menu img {
+    width: 70%;
+    padding: var(--padding-nav-left-menu);
+    margin-bottom: 10px;
+}
+
+#nav-left-menu .menu-container {
+    padding: var(--padding-nav-left-menu);
+    color: var(--secondary-text-color);
+    display: flex;
+    align-items: center;
+}
+
+#nav-left-menu .menu-container i {
+    min-width: 30px;
+}
+
+#nav-left-menu .home-container {
+    padding: var(--padding-nav-left-menu);
+    color: var(--main-text-color);
+    border-left: 3px solid #ADFF2F;
+}
+
+#nav-left-menu .playlist-nav-title {
+    color: var(--main-text-color);
+}
+
+#nav-left-menu .playlist-container button {
+    height: 30px;
+    border: none;
+    background-color: rgb(178, 178, 178);
+    margin-right: 5px;
+}
+
+#nav-left-menu .playlist-name-container {
+    height: 100%;
+}
+
+#nav-left-menu .install-app-container {
+    color: var(--secondary-text-color);
+    min-width: 210px;
+    margin: 0 auto;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--secondary-text-color);
+}
+#nav-left-menu .install-app-container svg {
+    width: 20px;
+    margin-right: 10px;
+}
+
+#nav-left-menu #grey-circle-profile {
+    background-color: grey;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* upgrade bar */
+
 #upgrade-bar {
-    min-width: calc(100% - 230px);
+    min-width: calc(100% - var(--nav-menu-width));
     height: var(--upgrade-bar-height);
     background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
     left: var(--nav-menu-width);
 }
 
+/* app content */
+
 #app-content {
-    height: calc(100vh - 90px);
+    height: calc(100vh - var(--upgrade-bar-height));
     width: 100%;
+    padding: 15px;
     
     overflow: auto;
     color: white;
     padding-top: var(--upgrade-bar-height);
-    
 }
 
 /*********** FOOTER */
