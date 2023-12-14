@@ -19,6 +19,7 @@
 
 img {
     width: 100%;
+    display:block
 }
 
 a {
@@ -41,7 +42,8 @@ svg {
 
 h2 {
     font-size: 1.5rem;
-    margin: 20px 0;
+    margin: 10px 0;
+    color: var(--main-text-color);
 }
 
 /****** HOVER */
@@ -59,21 +61,15 @@ button:hover {
 
 .row {
     width: 100%;
-    margin-left: -10px;
-    margin-right: -10px;
     display: flex;
     gap: 10px;
-    justify-content: center;
+    margin-top: 15px;
 }
 
 .col {
     width: calc(100% / 6);
-    padding-left: 10px;
-    padding-right: 10px;
-    height: 150px;
-
-    /*# debug */
-    background-color: orange;
+    min-height: 150px;
+    text-align: center;
 }
 
 /*********** MAIN */
@@ -161,7 +157,7 @@ button:hover {
     left: var(--nav-menu-width);
     text-align: right;
     line-height: var(--upgrade-bar-height);
-    padding-right: 10px;
+    padding-right: 20px;
 }
 
 #upgrade-bar .upgrade-button {
@@ -207,6 +203,30 @@ button:hover {
     right: 25%;
     width: 50%;
     border-top: 3px solid #ADFF2F;
+}
+
+#app-content .row .col img {
+    margin-bottom: 15px;
+} 
+
+#app-content .row .col .song-title {
+    color: var(--main-text-color);
+    margin-bottom: 10px;
+}
+
+#app-content .row .col .song-artist {
+    font-size: var(--subtitle-font-size);
+    color: var(--secondary-text-color);
+}
+
+#app-content .for-you {
+    font-size: var(--subtitle-font-size);
+    color: var(--secondary-text-color);
+    margin-bottom: 20px;
+}
+
+#app-content .row .col .artist-pic {
+border-radius: 50%;
 }
 
 /*********** FOOTER */
