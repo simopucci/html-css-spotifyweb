@@ -156,6 +156,17 @@ button:hover {
     background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
     left: var(--nav-menu-width);
+    text-align: right;
+    line-height: var(--upgrade-bar-height);
+    padding-right: 10px;
+}
+
+#upgrade-bar .upgrade-button {
+    color: var(--main-text-color);
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 30px;
+    padding: 7px 25px;
 }
 
 /* app content */
