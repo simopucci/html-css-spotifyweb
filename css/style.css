@@ -39,6 +39,11 @@ svg {
     color: currentColor;
 }
 
+h2 {
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
 /****** HOVER */
 
 button:hover {
@@ -48,8 +53,6 @@ button:hover {
 /********** APP-CONTENT GRID */
 
 .grid-container {
-    padding-left: 10px;
-    padding-right: 10px;
     display: flex;
     justify-content: center;
 }
@@ -175,10 +178,35 @@ button:hover {
     height: calc(100vh - var(--upgrade-bar-height));
     width: 100%;
     padding: 15px;
-    
     overflow: auto;
     color: white;
     padding-top: var(--upgrade-bar-height);
+}
+
+#app-content .nav-bar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    font-size: var(--subtitle-font-size);
+    color: var(--secondary-text-color);
+}
+
+#app-content .nav-bar li {
+    margin-right: 20px;
+}
+
+#app-content .nav-bar li:first-child {
+    position: relative;
+}
+
+#app-content .nav-bar li:first-child::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    right: 25%;
+    width: 50%;
+    border-top: 3px solid #ADFF2F;
 }
 
 /*********** FOOTER */
@@ -187,3 +215,6 @@ button:hover {
     height: var(--footer-height);
     background-color: #282828;
 }
+
+/*********** MEDIA QUERY */
+
