@@ -21,7 +21,8 @@
 
         <!-- ****** Nav Left Menu -->
         <div id="nav-left-menu">
-            <img src="./img/logo.svg" alt="Spotify Logo">
+            <img src="./img/logo.svg" alt="Spotify Logo" class="big-logo">
+            <img src="./img/logo-small.svg" alt="Logo small" class="small-logo">
             <div class="home-container menu-container">
                 <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M448 463.746h-149.333v-149.333h-85.334v149.333h-149.333v-315.428l192-111.746 192 110.984v316.19z" fill="#ffffff" /></svg><a href="#"> Home</a>
             </div>
@@ -35,7 +36,7 @@
                 <a href="#">PLAYLIST</a>
             </div>
             <div class="playlist-container menu-container">
-                <button><i class="fa-solid fa-plus fa-lg"></i></button><a href="#"> Crea Playlist</a>
+                <button><i class="fa-solid fa-plus"></i></button><a href="#"> Crea Playlist</a>
             </div>
             <div class="playlist-name-container">
                 <div class="playlist-name menu-container">
@@ -175,17 +176,19 @@
                 <div class="song-name-preview">Sinister</div>
                 <div class="artist-name-preview">Brano Nome</div>
             </div>
-            <i class="fa-regular fa-heart fa-lg"></i>
-            <i class="fa-regular fa-folder fa-lg"></i>
+            <div class="icons-container">
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-regular fa-folder"></i>
+            </div>
         </div>
 
         <div class="player">
             <div class="player-button-container">
-                <button><i class="fa-solid fa-shuffle fa-lg"></i></button>
-                <button><i class="fa-solid fa-backward-step fa-lg"></i></button>
+                <button><i class="fa-solid fa-shuffle"></i></button>
+                <button><i class="fa-solid fa-backward-step"></i></button>
                 <button class="play-button"><i class="fa-regular fa-circle-play fa-2xl"></i></button>
-                <button><i class="fa-solid fa-forward-step fa-lg"></i></button>
-                <button><i class="fa-solid fa-rotate-right fa-lg"></i></button>
+                <button><i class="fa-solid fa-forward-step"></i></button>
+                <button><i class="fa-solid fa-rotate-right"></i></button>
             </div>
             <div class="progress-bar-container">
                 <div class="current-sec">0.25</div>
@@ -197,9 +200,9 @@
         </div>
 
         <div class="mixer footer-layout">
-            <i class="fa-solid fa-list-ul fa-lg"></i>
-            <i class="fa-solid fa-display fa-lg"></i>
-            <i class="fa-solid fa-volume-high fa-lg"></i>
+            <i class="fa-solid fa-list-ul"></i>
+            <i class="fa-solid fa-display"></i>
+            <i class="fa-solid fa-volume-high"></i>
             <div class="small-progress-bar">
                 <div class="active-progress-bar"></div>
             </div>
