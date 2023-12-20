@@ -209,6 +209,8 @@ a:hover {
 
 #nav-left-menu .playlist-name-container {
     height: 100%;
+    overflow: auto;
+    min-height: 70px;
 }
 
 #nav-left-menu .install-app-container {
